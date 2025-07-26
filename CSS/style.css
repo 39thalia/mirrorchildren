@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+
+/* Common Styling */
+body{
+	font-family: 'Times New Roman', sans-serif;
+	background-color: #000000;
+}
+.text-white{
+	color: white;
+	font-weight: 600;
+}
+.custom-height{
+	min-height: 50vh;
+}
+.another-custom-height{
+	min-height: 80vh;
+}
+.default-height{
+	min-height: 20vh;
+}
+.make-me-fit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.this-width{
+	width: 60%;
+}
+
+/* Για να ξεφορτωθώ τα link underlines */
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+/* Navigation Bar */
+.nav-link{
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: white;
+	transition: 0.4s;
+}
+.nav-link:hover, .nav-link.active{
+	color: #4d4d4d;
+}
+
+/* Footer */
+.footer-link{
+	text-decoration: none!important;
+	color: #bbbbbb;
+}
+.footer-link:hover{
+	color: #4d4d4d;
+}
+
+/* Login Page */
+label{
+	padding-bottom: 3%;
+}
+input{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Our Mission Page */
+.left{
+	float: left;
+	padding-left: 5%; 
+	max-width: 50%;
+}
+.right{
+	padding-right: 5%;
+	padding-left: 55%;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		
+		<!-- Το style αρχείο μας -->
+		<link rel="stylesheet" href="css/style.css">
+		
+		<title>Mirror Children - Login</title>
+
+	</head>
+
+	<body>
+	
+		<!-- Ήχος για την σελίδα -->
+		<audio autoplay>
+			<source src="audio/spooky_Lovecraft_inspired_music.mp3" type="audio/mpeg">
+		</audio>
+		
+		<!-- Παρακάτω ακολουθεί η φόρμα σύνδεσης. Ο χρήστης καλείται να συμπληρώσει τα παρακάτω πεδία, προκειμένου να συνδεθεί στον προσωπικό του λογαριασμό. -->
+		<div class="container-fluid py-5 text-white">
+			<div class="row another-custom-height d-flex justify-content-center align-items-center">
+				<div class="col-5">
+			
+					<h4 style="letter-spacing: 0.05em;"><b><u>Login</u></b></h4>
+					<h6>*Fill in the login credentials that were given to you via the chatroom.</h6>
+					
+					<br>
+			
+					<form class="needs-validation" method="POST" action="" novalidate>
+				
+						<label for="username">Username: </label>
+						<input type="username" id="username" name="username" required>
+						<div class="invalid-feedback">Please input your username before you continue.</div>
+				
+						<br>
+				
+						<label for="password">Password: </label>
+						<input type="password" id="password" name="password" required>
+						<div class="invalid-feedback">Please input your password before you continue.</div>
+				
+						<br>
+				
+						<button onclick="credCheck()" id="login-success" type="button" name="login-btn">Submit</button>
+				
+					</form>
+			
+				</div>
+				
+			</div>
+		</div>
+	
+		<!--Footer-->
+		<div class="container-fluid footer-copyright">
+			<footer>
+				<div class="row">
+					<div class="col my-4 text-center">
+						<p class="text-white">&copy; 2025<a class="footer-link" href="https://www.ds.unipi.gr/"> Digital Systems Unipi</a></p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script>
+			
+			//JavaScript for disabling form submissions if there are invalid fields
+			// Self-executing function
+			(function () {
+				"use strict";
+				window.addEventListener(
+					"load",
+					function () {
+					// Fetch all the forms we want to apply custom Bootstrap validation styles to
+					var forms = document.getElementsByClassName("needs-validation");
+					// Loop over them and prevent submission
+					var validation = Array.prototype.filter.call(forms, function (
+						form
+						){
+							form.addEventListener(
+			 					"submit",
+								function (event) {
+									if (form.checkValidity() === false) {
+										event.preventDefault();
+										event.stopPropagation();
+									}
+									form.classList.add("was-validated");
+								},
+								false
+							);
+						});
+					},
+					false
+				);
+			})();
+			
+			// Checking the credentials
+			function credCheck() {
+				
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				
+				if ((username.length !== 0) && (password.length !== 0)){
+					
+					if (username === "childNO55" && password === "yup"){ //1t1sN3v3r2L4t3t0g0b4ck
+						
+						window.location.href = "./success.html"
+						console.log("yes");
+						console.log(username);
+					
+					} else{
+						
+						window.location.href = "./failure.html"
+						console.log("no");
+						console.log(username);
+					
+					}
+				
+				}
+			
+			}
+		
+		</script>
+	
+	</body>
+	
+</html>
