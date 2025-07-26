@@ -1,2 +1,2 @@
 # mirrorchildren
-A simple website written with HTML, CSS and Javascript.
+A simple website written in HTML, CSS and Javascript.
